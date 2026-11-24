@@ -168,12 +168,15 @@ The analytical expressions presented in this article were derived from fundament
 ## Acknowledgment
 
 This document was prepared based on experience gained from various tests conducted at TÜBİTAK BİLGEM Antenna Test and Research Center (ATAM) and the support from AI tools.
+
+
 <script>
-MathJax = {
+window.MathJax = {
   tex: {
     inlineMath: [['$', '$'], ['\\(', '\\)']],
     displayMath: [['$$', '$$'], ['\\[', '\\]']]
   }
 };
 </script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4.1.3/sre/speech-worker.min.js"></script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
