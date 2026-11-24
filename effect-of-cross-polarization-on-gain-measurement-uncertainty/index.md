@@ -1,6 +1,6 @@
 # Effect of Cross-Polarization on Gain Measurement Uncertainty
 
-*Author: Hüseyin YİĞİT*, *TÜBİTAK BİLGEM Antenna Test and Research Center (ATAM)*, 24th November 2026
+*Author: Hüseyin YİĞİT*, 24th November 2026
 
 - [Effect of Cross-Polarization on Gain Measurement Uncertainty](#effect-of-cross-polarization-on-gain-measurement-uncertainty)
   - [1. Measurement model](#1-measurement-model)
