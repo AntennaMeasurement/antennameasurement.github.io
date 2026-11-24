@@ -150,7 +150,7 @@ $$u_G \approx0.01586\;\mathrm{dB}$$
 **Validity note:** 
 - This model does not take into account gain calibration method uncertainty. It should be considered as an additional uncertainty contribution for the total gain measurement uncertainty.
 - If the relative phase is assumed to have a uniform distribution instead of a rectangular distribution, $\sqrt3$ is replaced by $\sqrt2$ in the standard uncertainty calculation.
-- This procedure is derived for far-field gain measurements. In near-field gain measurements, the cross-polarization ratio of the probe antenna may vary with distance, which can be considered in the uncertainty evaluation.
+- This procedure is derived for far-field gain measurements. In near-field gain measurements, the cross-polarization ratio of the probe antenna may vary with distance, which can be additionally considered in the uncertainty evaluation.
 
 
 ## References
