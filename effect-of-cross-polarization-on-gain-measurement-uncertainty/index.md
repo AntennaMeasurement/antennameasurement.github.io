@@ -17,7 +17,6 @@
     - [9.3. Standard measurement uncertainty](#93-standard-measurement-uncertainty)
     - [9.4. Assumptions and conclusion](#94-assumptions-and-conclusion)
   - [References](#references)
-  - [Acknowledgment](#acknowledgment)
 
 
 ## 1. Measurement model
