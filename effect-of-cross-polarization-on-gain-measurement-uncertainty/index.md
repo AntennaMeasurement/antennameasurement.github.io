@@ -11,6 +11,11 @@
   - [6. Calculation of the standard measurement uncertainty](#6-calculation-of-the-standard-measurement-uncertainty)
   - [7. Graphical representation of the gain error and uncertainty](#7-graphical-representation-of-the-gain-error-and-uncertainty)
   - [8. Numerical example](#8-numerical-example)
+  - [9. Case for a linearly polarized probe and a circularly polarized AUT](#9-case-for-a-linearly-polarized-probe-and-a-circularly-polarized-aut)
+    - [9.1. H/V reconstruction model](#91-hv-reconstruction-model)
+    - [9.2. Gain error bounds](#92-gain-error-bounds)
+    - [9.3. Standard measurement uncertainty](#93-standard-measurement-uncertainty)
+    - [9.4. Assumptions and conclusion](#94-assumptions-and-conclusion)
   - [References](#references)
   - [Acknowledgment](#acknowledgment)
 
@@ -151,6 +156,129 @@ $$u_G \approx0.01586\;\mathrm{dB}$$
 - This model does not take into account gain calibration method uncertainty. It should be considered as an additional uncertainty contribution for the total gain measurement uncertainty.
 - If the relative phase is assumed to have a uniform distribution instead of a rectangular distribution, $\sqrt3$ is replaced by $\sqrt2$ in the standard uncertainty calculation.
 - This procedure is derived for far-field gain measurements. In near-field gain measurements, the cross-polarization ratio of the probe antenna may vary with distance, which can be additionally considered in the uncertainty evaluation.
+
+## 9. Case for a linearly polarized probe and a circularly polarized AUT
+
+Different from the previous case, since the AUT is circularly polarized its cross-polarization is close to 0 dB. Therefore, the gain measurement uncertainty is dominated by the probe antenna XPD value.
+
+### 9.1. H/V reconstruction model
+
+For coherent measurements of the two orthogonal linear components with a linearly polarized probe, the measured fields can be represented as:
+
+$$
+\begin{bmatrix}
+M_H\\
+M_V
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & \varepsilon_p^*\\
+-\varepsilon_p^* & 1
+\end{bmatrix}
+\begin{bmatrix}
+E_H\\
+E_V
+\end{bmatrix}
+$$
+
+where $\varepsilon_p=r_pe^{j\phi_p}$ is the complex cross-polarization coefficient of the probe and
+
+$$
+r_p=10^{-\frac{\mathrm{XPD}_p}{20}}
+$$
+
+The right- and left-hand circular components are reconstructed from the measured H/V fields using:
+
+$$
+M_R=\frac{M_H-jM_V}{\sqrt{2}},
+\qquad
+M_L=\frac{M_H+jM_V}{\sqrt{2}}
+$$
+
+Ideal 90° probe rotation and equal H/V channel balance give:
+
+$$
+\boxed{M_R=(1+j\varepsilon_p^*)E_R}
+\qquad
+\boxed{M_L=(1-j\varepsilon_p^*)E_L}
+$$
+
+The probe's cross-polarization coefficient therefore introduces the same magnitude correction to both circularly polarized components, with opposite complex signs.
+
+### 9.2. Gain error bounds
+
+The RHCP and LHCP gain errors are:
+
+$$
+\Delta G_R=20\log_{10}|1+j\varepsilon_p^*|,
+\qquad
+\Delta G_L=20\log_{10}|1-j\varepsilon_p^*|
+$$
+
+Defining the effective error coefficient
+
+$$
+\boxed{q=10^{-\frac{\mathrm{XPD}_p}{20}}}
+$$
+
+the worst-case gain error limits for either circular polarization component are:
+
+$$
+\boxed{
+\Delta G_{\pm}
+=20\log_{10}\left(1\pm10^{-\frac{\mathrm{XPD}_p}{20}}\right)
+}
+$$
+
+For $q\ll1$, the first-order approximation is:
+
+$$
+\boxed{
+\Delta G_{\pm}\approx
+\pm8.686\times10^{-\frac{\mathrm{XPD}_p}{20}}\quad[\mathrm{dB}]
+}
+$$
+
+### 9.3. Standard measurement uncertainty
+
+For a conservative symmetric rectangular probability distribution, the standard gain measurement uncertainty is:
+
+$$
+\boxed{
+u_G=
+-\frac{20}{\sqrt{3}}
+\log_{10}\left(1-10^{-\frac{\mathrm{XPD}_p}{20}}\right)
+\quad[\mathrm{dB}]
+}
+$$
+
+At sufficiently high probe XPD values:
+
+$$
+\boxed{
+u_G\approx
+\frac{8.686}{\sqrt{3}}
+10^{-\frac{\mathrm{XPD}_p}{20}}
+\quad[\mathrm{dB}]
+}
+$$
+
+For example, a 30 dB probe XPD gives a maximum absolute gain error of approximately 0.279 dB and a standard uncertainty of approximately 0.161 dB.
+
+In order to give clear distinction between two cases, following figure shows the gain measurement uncertainty differencefor a same linearly polarized probe. 
+
+![Impact of Cross-Polarization on Gain Measurement Uncertainty for Circularly Polarized AUT](img/impact-of-probe-xpd-on-gain-measurement-error-linear-and-circular-polarization.png)
+
+### 9.4. Assumptions and conclusion
+
+The summarized result assumes:
+
+- coherent measurement of the H and V components with accurate 90° phase difference;
+- ideal CP AUT is thought to be worst case scenario for gain measurement error;
+- a symmetric rectangular distribution for uncertainty evaluation.
+
+Under these ideal reconstruction conditions, the error is independent of the AUT's XPD and axial ratio. It is determined by the probe XPD alone. Every 20 dB improvement in probe XPD reduces the first-order gain uncertainty by approximately a factor of ten.
+
 
 
 ## References
