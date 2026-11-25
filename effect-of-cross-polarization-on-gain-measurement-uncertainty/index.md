@@ -293,10 +293,6 @@ The analytical expressions presented in this article were derived from fundament
 5. C. Parini, S. Gregson, J. McCormick, and D. Janse van Rensburg, *Theory and Practice of Modern Antenna Range Measurements*. Institution of Engineering and Technology (IET), 2014.
 6. JCGM 100:2008, *Evaluation of Measurement Data — Guide to the Expression of Uncertainty in Measurement (GUM)*, 2008.
 
-## Acknowledgment
-
-This document was prepared based on experience gained from various tests conducted at TÜBİTAK BİLGEM Antenna Test and Research Center (ATAM) and the support from AI tools.
-
 
 <script>
 window.MathJax = {
